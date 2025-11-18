@@ -1,0 +1,144 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    font-family: 'Roboto', sans-serif;
+    transition: background-color 0.4s, color 0.4s;
+}
+
+h1 {
+    font-weight: 700;
+    font-size: 2.8rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    user-select: none;
+}
+
+h1 i {
+    font-size: 2.8rem;
+    color: #ff4757;
+    animation: pulseHeart 1.5s infinite;
+}
+
+@keyframes pulseHeart {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.15); }
+}
+
+.card {
+    background-color: rgba(255, 255, 255, 0.08);
+    border-radius: 1rem;
+    padding: 2.5rem 3rem;
+    max-width: 670px;
+    width: 100%;
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.45);
+}
+
+textarea.form-control {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    background-color: #1f1f3f;
+    border-radius: 0.6rem;
+    border: 1.5px solid #57578a;
+    color: #e2e2f0;
+    resize: vertical;
+    min-height: 130px;
+    transition: border-color 0.3s ease;
+}
+
+textarea.form-control:focus {
+    border-color: #a18eff;
+    outline: none;
+    box-shadow: 0 0 8px #a18effcc;
+}
+
+#fileUpload {
+    background-color: #1f1f3f !important;
+    border-radius: 0.6rem !important;
+    border: 1.5px solid #57578a !important;
+    color: #dcdcff !important;
+    transition: border-color 0.3s ease !important;
+}
+
+#fileUpload:focus {
+    border-color: #a18eff !important;
+    outline: none !important;
+    box-shadow: 0 0 8px #a18effcc !important;
+}
+
+.btn-primary {
+    background-color: #5a47ab;
+    border-radius: 0.7rem;
+    border: none;
+    font-weight: 700;
+    padding: 0.75rem 1em;
+    font-size: 1.1rem;
+    box-shadow: 0 6px 20px rgba(90, 71, 171, 0.45);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.6rem;
+    user-select: none;
+}
+
+.btn-primary:hover {
+    background-color: #45348f;
+    box-shadow: 0 10px 30px rgba(69, 52, 143, 0.7);
+}
+
+#result {
+    margin-top: 1.8rem;
+    font-weight: 700;
+    font-size: 1.5rem;
+    text-align: center;
+    min-height: 2rem;
+    letter-spacing: 0.03em;
+    user-select: text;
+}
+
+canvas {
+    margin-top: 3rem;
+    user-select: none;
+    border-radius: 1rem;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background: #0a0a23;
+    color: #ccccee;
+}
+
+body.dark-mode .card {
+    background-color: #27273f !important;
+    box-shadow: 0 10px 30px rgba(255, 255, 255, 0.12);
+}
+
+body.dark-mode textarea.form-control {
+    background-color: #36365a !important;
+    color: #dcdcff !important;
+    border-color: #7b79d7;
+}
+
+body.dark-mode #fileUpload {
+    background-color: #36365a !important;
+    color: #dcdcff !important;
+    border-color: #7b79d7 !important;
+}
+
+/* Spinner for loading inside button */
+.spinner-border {
+    width: 1.2rem;
+    height: 1.2rem;
+    border-width: 0.15em;
+    color: white;
+}
